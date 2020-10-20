@@ -67,7 +67,7 @@ class enrutador {
      * Ejecuta la solicitud establecida. Devuelve el valor de retorno del método.
      * @return mixed
      */
-    public function ejecutar() {var_dump($this);
+    public function ejecutar() {
         //Clase por defecto y método de error
         if(!$this->clase||$this->error) {
             include_once($this->rutaInicio);
