@@ -1,16 +1,16 @@
 Concepto de enrutador de solicitudes dinámico, que no requiere establecer las rutas previamente.
 
-#### Modo de uso
+### Modo de uso
 
 - La única configuración que se requiere es modificar la ruta base en la última línea de `index.php`. Ejemplo, si la URL es `http://localhost/enrutador-dinamico/` la ruta base es `/enrutador-dinamico/`.
 - Crear las clases públicas en el directorio `clases` (incluso subdirectorios).
 - Cada clase debe residir en un archivo `.php` y contener una clase del mismo nombre que el archivo en el espacio de nombres `clasesPublicas\\subdirectorio`.
-- Si el nombre presenta `-` se convertirán a nombres válidos de clase y espacio de la forma: `mi-clase` -> `miClase`.
+- Si el nombre presenta `-` se convertirán a nombres válidos de clase, espacio o método de la forma: `mi-clase` -> `miClase`. Esto no aplica al nombre de archivo ni de subdirectorios (debe ser `mi-ruta/mi-clase.php`).
 - El método predeterminado de una clase será `inicio()`.
 - El método predeterminado será `predeterminado::inicio()` en `clases/predeterminado.php`.
 - El método en caso de error será `predeterminado::error()` en `clases/predeterminado.php`.
 
-#### Ejemplos
+### Ejemplos
 
 **Ruta: `/clase/metodo/`**
 
@@ -66,7 +66,7 @@ Método: `inicio`
         }
     }
 
-#### Objetivo
+### Objetivo
 
 El propósito de este repositorio es explorar el potencial y las implicaciones de seguridad de este mecanimsmo.
 
@@ -74,7 +74,7 @@ Si te parece útil, sentite libre de utilizarlo tal cual o integrarlo en otros p
 
 De lo contrario, estoy dispuesto a aceptar que es basura siempre que el comentario sea acompañado de una explicación técnica que nos enriquezca a todos.
 
-#### TODO
+### TODO
 
 - Verbos. Lo haría configurable en cada método con comentarios de documentación.
 - Redireccionamientos.
